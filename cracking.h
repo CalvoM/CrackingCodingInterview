@@ -8,4 +8,6 @@
 #include <iostream>
 bool isUnique(std::string);
 bool isPerm(std::string, std::string);
+std::string urlify(std::string,int);
+bool isPalindromePerm(std::string);
 #endif //CRACKING_H

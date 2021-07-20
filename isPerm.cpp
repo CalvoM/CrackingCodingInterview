@@ -6,7 +6,6 @@
 #include <bitset>
 bool isPerm(std::string original, std::string sub){
     std::bitset<128>originalSet;
-    std::bitset<128>permSet;
     for(auto o:original){
         originalSet.set(tolower(o));
     }
