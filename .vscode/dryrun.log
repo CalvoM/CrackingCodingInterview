@@ -1,6 +1,0 @@
-make run --dry-run --keep-going --print-directory
-make: Entering directory '/home/d1r3ct0r/Documents/Coding/CrackingCodingInterview'
-make: Leaving directory '/home/d1r3ct0r/Documents/Coding/CrackingCodingInterview'
- 
-make: *** No rule to make target 'run'.
- 
