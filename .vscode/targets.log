@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jul 22 21:29:09 2021
+# Make data base, printed on Thu Jul 22 23:28:17 2021
 
 # Variables
 
@@ -140,8 +140,8 @@ XCURSOR_THEME = Sweet-cursors
 XDG_SESSION_DESKTOP = KDE
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code-insiders?aid=a04472a4-f4ea-4854-bf12-95bb0f2dd01a&uid=ccf9577c-ea34-43cd-a6e9-b8621717ea6f&iid=ccf9577c-ea34-43cd-a6e9-b8621717ea6f&sid=ccf9577c-ea34-43cd-a6e9-b8621717ea6f","uploadToServer":true}
-# makefile
-MAKEFILE_LIST := 
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
 # environment
 SNAP_REEXEC = 
 # automatic
@@ -261,7 +261,7 @@ SNAP_ARCH = amd64
 # environment
 XDG_VTNR = 1
 # makefile
-.DEFAULT_GOAL := 
+.DEFAULT_GOAL := install
 # environment
 SYSTEMD_EXEC_PID = 1186
 # environment
@@ -276,17 +276,29 @@ GTK_MODULES = canberra-gtk-module
 USER = d1r3ct0r
 # default
 MAKE_VERSION := 4.3
+ 
 # environment
+ 
 KDE_SESSION_UID = 1000
+ 
 # environment
+ 
 DISABLE_WAYLAND = 1
+ 
 # environment
+ 
 SNAP_DATA = /var/snap/code-insiders/770
+ 
 # environment
+ 
 SNAP_CONTEXT = oWVA3oVV_63FV4SbJuKOHNkmndEZ5l7HQ_LUEqk_A4FKMzIRxEQ_
+ 
 # environment
+ 
 KONSOLE_DBUS_SESSION = /Sessions/1
+ 
 # environment
+ 
 LC_MEASUREMENT = en_GB.UTF-8
 # environment
 SSH_AGENT_PID = 10384
@@ -296,7 +308,6 @@ PAGER = less
 _ = /usr/bin/make
 # environment
 LC_PAPER = en_GB.UTF-8
- 
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -366,7 +377,7 @@ LC_IDENTIFICATION = en_GB.UTF-8
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=176/1024=17%, Rehash=0, Collisions=20/203=10%
+# Load=176/1024=17%, Rehash=0, Collisions=20/206=10%
 
 # Pattern-specific Variable Values
 
@@ -374,9 +385,9 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# . (device 2050, inode 10491034): 9 files, no impossibilities.
+# . (device 2050, inode 10491034): 12 files, no impossibilities.
 
-# 9 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -387,9 +398,16 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  File does not exist.
+#  Last modified 2021-07-22 23:27:52.078574386
 #  File has been updated.
-#  Failed to be updated.
+#  Successfully updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 6):
+	rm -rf build/
 
 # Not a target:
 .DEFAULT:
@@ -404,34 +422,34 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
-# Not a target:
-makefile:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
+build:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 4):
+	python setup.py build
 
-# Not a target:
-GNUmakefile:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
+install: build
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 2):
+	sudo python setup.py install
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
+# Load=7/1024=1%, Rehash=0, Collisions=0/19=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 17 / storage = 143 B / avg = 8 B
-# current buf: size = 8162 B / used = 143 B / count = 17 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 19 / storage = 155 B / avg = 8 B
+# current buf: size = 8162 B / used = 155 B / count = 19 / avg = 8 B
 
-# strcache performance: lookups = 20 / hit rate = 15%
+# strcache performance: lookups = 28 / hit rate = 32%
 # hash-table stats:
-# Load=17/8192=0%, Rehash=0, Collisions=0/20=0%
-# Finished Make data base on Thu Jul 22 21:29:09 2021
+# Load=19/8192=0%, Rehash=0, Collisions=0/28=0%
+# Finished Make data base on Thu Jul 22 23:28:17 2021
 
  

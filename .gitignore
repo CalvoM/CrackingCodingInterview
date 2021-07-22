@@ -1,3 +1,5 @@
 .idea/
 src/cracking
 src/testing
+.vscode/
+build/
