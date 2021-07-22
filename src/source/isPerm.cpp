@@ -2,7 +2,7 @@
 // Created by d1r3ct0r on 12/07/2021.
 //
 
-#include "cracking.h"
+#include "../includes/cracking.h"
 #include <bitset>
 bool isPerm(std::string original, std::string sub){
     std::bitset<128>originalSet;

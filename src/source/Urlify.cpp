@@ -2,7 +2,7 @@
 // Created by d1r3ct0r on 15/07/2021.
 //
 
-#include "cracking.h"
+#include "../includes/cracking.h"
 
 std::string urlify(std::string originalStr, int trueLen){
     //find the space count
