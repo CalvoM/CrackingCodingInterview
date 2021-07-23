@@ -25,11 +25,19 @@ PyObject *Pyurlify(PyObject *self, PyObject *args){
     std::string res = urlify(str_,len);
     return PyUnicode_FromString(res.c_str());
 }
+PyObject *PyPalindrome(PyObject *self, PyObject *args){
+    char *str;
+    if(!PyArg_ParseTuple(args,"s",&str)) return NULL;
+    std::string str_(str);
+    uint8_t r = isPalindromePerm(str_);
+    return PyBool_FromLong(r);
+}
 
 PyMethodDef moduleMethods[] = {
     {"is_unique",PyisUnique,METH_VARARGS,"Check if the string provide has unique characters"},
     {"is_permutation",PyisPerm,METH_VARARGS,"Check if the second string is a permutation of the first"},
     {"urlify",Pyurlify,METH_VARARGS,"Urlify spaces in strings"},
+    {"is_palindrome_permutation",PyPalindrome,METH_VARARGS,"Check if the string is a permutation of palindrome"},
     {NULL}
 };
 

@@ -5,7 +5,7 @@ import os
 moduleName = "cracking"
 
 srcFiles = ["src/source/isUnique.cpp","src/source/isPerm.cpp",
-            "cracking.cpp","src/source/Urlify.cpp"]
+            "cracking.cpp","src/source/Urlify.cpp","src/source/isPalindromePerm.cpp"]
 headerFiles = ["src/includes"]
 
 extensions = Extension(moduleName,srcFiles,headerFiles)
