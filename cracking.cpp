@@ -17,10 +17,19 @@ PyObject *PyisPerm(PyObject *self, PyObject *args){
     uint8_t r = isPerm(str,str2);
     return PyBool_FromLong(r);
 }
+PyObject *Pyurlify(PyObject *self, PyObject *args){
+    char *str;
+    int len;
+    if(!PyArg_ParseTuple(args,"si",&str,&len)) return NULL;
+    std::string str_(str);
+    std::string res = urlify(str_,len);
+    return PyUnicode_FromString(res.c_str());
+}
 
 PyMethodDef moduleMethods[] = {
     {"is_unique",PyisUnique,METH_VARARGS,"Check if the string provide has unique characters"},
     {"is_permutation",PyisPerm,METH_VARARGS,"Check if the second string is a permutation of the first"},
+    {"urlify",Pyurlify,METH_VARARGS,"Urlify spaces in strings"},
     {NULL}
 };
 
