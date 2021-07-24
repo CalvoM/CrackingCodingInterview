@@ -10,4 +10,6 @@ bool isUnique(std::string);
 bool isPerm(std::string, std::string);
 std::string urlify(std::string,int);
 bool isPalindromePerm(std::string);
+bool oneAway(std::string, std::string);
+std::string compressString(std::string);
 #endif //CRACKING_H

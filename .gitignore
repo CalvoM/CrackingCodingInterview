@@ -3,3 +3,5 @@ src/cracking
 src/testing
 .vscode/
 build/
+dist/
+cracking.egg*

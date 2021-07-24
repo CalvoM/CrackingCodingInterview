@@ -3,4 +3,6 @@ install:build
 build:
 	python setup.py build
 clean:
-	rm -rf build/
+	rm -rf build/ cracking.egg-info/
+generate:build
+	python setup.py sdist bdist_wheel
