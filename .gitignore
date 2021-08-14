@@ -5,3 +5,4 @@ src/testing
 build/
 dist/
 cracking.egg*
+testing

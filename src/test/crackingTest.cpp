@@ -4,8 +4,9 @@
 #define CATCH_CONFIG_MAIN
 #include <catch2/catch.hpp>
 #include "cracking.h"
+#include "../includes/Llist.hpp"
 
-TEST_CASE("Cracking the coding interview","[cracking]"){
+TEST_CASE("Chapter One","Arrays and Strings"){
     REQUIRE(isUnique("aeiou")==true);
     REQUIRE(isUnique("baobab")==false);
     REQUIRE(oneAway("pale","ple")==true);
@@ -14,5 +15,14 @@ TEST_CASE("Cracking the coding interview","[cracking]"){
     REQUIRE(oneAway("bake","pale")==false);
     REQUIRE(compressString("aabcccddeeaaa")=="a2b1c3d2e2a3");
     REQUIRE(compressString("aabcccccaaa")=="a2b1c5a3");
+}
+
+TEST_CASE("Chapter Two","Linked List"){
+    LList myList;
+    const int elems = 12;
+    for(int i=0;i<elems;i++){
+        myList.append(i);
+    }
+    REQUIRE(myList.size() == elems);
 }
 

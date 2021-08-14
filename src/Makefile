@@ -9,5 +9,6 @@ run: build
 testing:
 	@$(CC) $(CFLAGS) test/crackingTest.cpp -o $(testing)
 	@./$(testing) -s -r compact
+	@rm $(testing)
 clean:
-	@rm $(testing) $(binFile)
+	@rm $(binFile)
