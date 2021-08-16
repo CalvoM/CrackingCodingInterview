@@ -1,4 +1,5 @@
 #include "../includes/Llist.hpp"
+#include <map>
 
 LList::LList(){
     this->head = nullptr;
@@ -17,6 +18,27 @@ void LList::append(int val){
         this->tail = n->next;
     }
     this->count++;
+}
+
+unsigned int LList::removeDuplicates(){
+    if(this->head == nullptr){
+        return 0;
+    }
+    std::map<int, bool> elems;
+    Node *cur = this->head;
+    Node *prev = nullptr;
+    while(cur != nullptr){
+        if(elems.find(cur->val) != elems.end()){
+            prev->next = cur->next;
+            this->count--;
+            cur = cur->next;
+        }else{
+            elems[cur->val] = true;
+            prev = cur;
+            cur = cur->next;
+        }
+    }
+    return this->size();
 }
 
 unsigned int LList::size() const{

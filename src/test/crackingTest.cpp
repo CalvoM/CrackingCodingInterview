@@ -19,10 +19,15 @@ TEST_CASE("Chapter One","Arrays and Strings"){
 
 TEST_CASE("Chapter Two","Linked List"){
     LList myList;
+    REQUIRE(myList.removeDuplicates() == 0);
     const int elems = 12;
     for(int i=0;i<elems;i++){
         myList.append(i);
     }
     REQUIRE(myList.size() == elems);
+    for(int i=0;i<elems;i++){
+        myList.append(i);
+    }
+    REQUIRE(myList.removeDuplicates() == elems);
 }
 

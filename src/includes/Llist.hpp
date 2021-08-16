@@ -13,6 +13,7 @@ public:
     LList();
     void append(int val);
     unsigned int size() const;
+    unsigned int removeDuplicates();
 private:
     Node *head;
     Node *tail;
