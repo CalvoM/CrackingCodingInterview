@@ -9,6 +9,7 @@ run: build
 testing:
 	@$(CC) $(CFLAGS) test/crackingTest.cpp -o $(testing)
 	@./$(testing) -s -r console
-	@rm $(testing)
+mem_check:
+	@valgrind --tool=memcheck --leak-check=full -s ./$(testing)
 clean:
 	@rm $(binFile)

@@ -29,5 +29,7 @@ TEST_CASE("Chapter Two","Linked List"){
         myList.append(i);
     }
     REQUIRE(myList.removeDuplicates() == elems);
+    REQUIRE(myList.KthToLast(1).val == 10);
+    REQUIRE(myList.KthToLast(2).val == 9);
 }
 

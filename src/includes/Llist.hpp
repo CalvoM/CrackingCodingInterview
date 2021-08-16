@@ -14,6 +14,8 @@ public:
     void append(int val);
     unsigned int size() const;
     unsigned int removeDuplicates();
+    Node KthToLast(unsigned int K);
+    ~LList();
 private:
     Node *head;
     Node *tail;
